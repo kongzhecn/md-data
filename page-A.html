@@ -1,0 +1,720 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Method Comparison Videos</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        .case-header {
+            transition: all 0.3s ease;
+        }
+        .case-header:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+        }
+        .video-container {
+            transition: all 0.3s ease;
+        }
+        .video-container:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 20px rgba(0,0,0,0.2);
+        }
+        .lightbox {
+            display: none;
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0,0,0,0.9);
+            z-index: 1000;
+            align-items: center;
+            justify-content: center;
+        }
+        .lightbox-content {
+            width: 80%;
+            max-width: 1000px;
+            position: relative;
+        }
+        .close-lightbox {
+            position: absolute;
+            top: -40px;
+            right: 0;
+            color: white;
+            font-size: 2rem;
+            cursor: pointer;
+        }
+        .case-header {
+            border-left: 4px solid #3b82f6;
+        }
+        .method-tag {
+            position: absolute;
+            top: 10px;
+            left: 10px;
+            background: rgba(0,0,0,0.7);
+            color: white;
+            padding: 5px 10px;
+            border-radius: 4px;
+            font-size: 0.8rem;
+            z-index: 10;
+        }
+    </style>
+</head>
+<body class="bg-gray-100">
+    <div class="container mx-auto px-4 py-8">
+        <header class="text-center mb-12">
+            <h1 class="text-4xl font-bold text-gray-800 mb-4">User Study</h1>
+            <p class="text-xl text-gray-600 max-w-3xl mx-auto">
+                请根据问卷题目作答
+            </p>
+        </header>
+
+        <div class="grid grid-cols-1 gap-8 mb-12">
+            <!-- Case 1 -->
+            <div class="case-header bg-white p-4 rounded-lg shadow-sm">
+                <h2 class="text-xl font-bold mb-2">Case 1</h2>
+            </div>
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+            <div class="video-container bg-white rounded-lg overflow-hidden shadow-md relative">
+                <div class="method-tag">A</div>
+                <video class="w-full h-auto cursor-pointer" poster="https://via.placeholder.com/500x300?text=Method+A" controls onclick="this.paused ? this.play() : this.pause();">
+                    <source src="EMTD/infinitetalk/0BF2Np5J6jY-Scene-003.mp4" type="video/mp4">
+                    Your browser does not support the video tag.
+                </video>
+            </div>
+
+            <div class="video-container bg-white rounded-lg overflow-hidden shadow-md relative">
+                <div class="method-tag">B</div>
+                <video class="w-full h-auto cursor-pointer" poster="https://via.placeholder.com/500x300?text=Method+B" controls onclick="this.paused ? this.play() : this.pause();">
+                    <source src="EMTD/latentsync/0BF2Np5J6jY-Scene-003.mp4" type="video/mp4">
+                    Your browser does not support the video tag.
+                </video>
+            </div>
+
+            <div class="video-container bg-white rounded-lg overflow-hidden shadow-md relative">
+                <div class="method-tag">C</div>
+                <video class="w-full h-auto cursor-pointer" poster="https://via.placeholder.com/500x300?text=Method+C" controls onclick="this.paused ? this.play() : this.pause();">
+                    <source src="EMTD/musetalk/0BF2Np5J6jY-Scene-003_x1Efv_wF5LE-Scene-010.mp4" type="video/mp4">
+                    Your browser does not support the video tag.
+                </video>
+            </div>
+
+            </div>
+
+            <!-- Case 2 -->
+            <div class="case-header bg-white p-4 rounded-lg shadow-sm">
+                <h2 class="text-xl font-bold mb-2">Case 2</h2>
+            </div>
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+            <div class="video-container bg-white rounded-lg overflow-hidden shadow-md relative">
+                <div class="method-tag">A</div>
+                <video class="w-full h-auto cursor-pointer" poster="https://via.placeholder.com/500x300?text=Method+A" controls onclick="this.paused ? this.play() : this.pause();">
+                    <source src="EMTD/infinitetalk/4c_xYLwOx-g-Scene-023.mp4" type="video/mp4">
+                    Your browser does not support the video tag.
+                </video>
+            </div>
+
+            <div class="video-container bg-white rounded-lg overflow-hidden shadow-md relative">
+                <div class="method-tag">B</div>
+                <video class="w-full h-auto cursor-pointer" poster="https://via.placeholder.com/500x300?text=Method+B" controls onclick="this.paused ? this.play() : this.pause();">
+                    <source src="EMTD/latentsync/4c_xYLwOx-g-Scene-023.mp4" type="video/mp4">
+                    Your browser does not support the video tag.
+                </video>
+            </div>
+
+            <div class="video-container bg-white rounded-lg overflow-hidden shadow-md relative">
+                <div class="method-tag">C</div>
+                <video class="w-full h-auto cursor-pointer" poster="https://via.placeholder.com/500x300?text=Method+C" controls onclick="this.paused ? this.play() : this.pause();">
+                    <source src="EMTD/musetalk/4c_xYLwOx-g-Scene-023_4SCrXqbhmCY-Scene-008.mp4" type="video/mp4">
+                    Your browser does not support the video tag.
+                </video>
+            </div>
+
+            </div>
+
+            <!-- Case 3 -->
+            <div class="case-header bg-white p-4 rounded-lg shadow-sm">
+                <h2 class="text-xl font-bold mb-2">Case 3</h2>
+            </div>
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+            <div class="video-container bg-white rounded-lg overflow-hidden shadow-md relative">
+                <div class="method-tag">A</div>
+                <video class="w-full h-auto cursor-pointer" poster="https://via.placeholder.com/500x300?text=Method+A" controls onclick="this.paused ? this.play() : this.pause();">
+                    <source src="EMTD/infinitetalk/4SCrXqbhmCY-Scene-008.mp4" type="video/mp4">
+                    Your browser does not support the video tag.
+                </video>
+            </div>
+
+            <div class="video-container bg-white rounded-lg overflow-hidden shadow-md relative">
+                <div class="method-tag">B</div>
+                <video class="w-full h-auto cursor-pointer" poster="https://via.placeholder.com/500x300?text=Method+B" controls onclick="this.paused ? this.play() : this.pause();">
+                    <source src="EMTD/latentsync/4SCrXqbhmCY-Scene-008.mp4" type="video/mp4">
+                    Your browser does not support the video tag.
+                </video>
+            </div>
+
+            <div class="video-container bg-white rounded-lg overflow-hidden shadow-md relative">
+                <div class="method-tag">C</div>
+                <video class="w-full h-auto cursor-pointer" poster="https://via.placeholder.com/500x300?text=Method+C" controls onclick="this.paused ? this.play() : this.pause();">
+                    <source src="EMTD/musetalk/4SCrXqbhmCY-Scene-008_x1Efv_wF5LE-Scene-085.mp4" type="video/mp4">
+                    Your browser does not support the video tag.
+                </video>
+            </div>
+
+            </div>
+
+            <!-- Case 4 -->
+            <div class="case-header bg-white p-4 rounded-lg shadow-sm">
+                <h2 class="text-xl font-bold mb-2">Case 4</h2>
+            </div>
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+            <div class="video-container bg-white rounded-lg overflow-hidden shadow-md relative">
+                <div class="method-tag">A</div>
+                <video class="w-full h-auto cursor-pointer" poster="https://via.placeholder.com/500x300?text=Method+A" controls onclick="this.paused ? this.play() : this.pause();">
+                    <source src="EMTD/infinitetalk/4SCrXqbhmCY-Scene-049.mp4" type="video/mp4">
+                    Your browser does not support the video tag.
+                </video>
+            </div>
+
+            <div class="video-container bg-white rounded-lg overflow-hidden shadow-md relative">
+                <div class="method-tag">B</div>
+                <video class="w-full h-auto cursor-pointer" poster="https://via.placeholder.com/500x300?text=Method+B" controls onclick="this.paused ? this.play() : this.pause();">
+                    <source src="EMTD/latentsync/4SCrXqbhmCY-Scene-049.mp4" type="video/mp4">
+                    Your browser does not support the video tag.
+                </video>
+            </div>
+
+            <div class="video-container bg-white rounded-lg overflow-hidden shadow-md relative">
+                <div class="method-tag">C</div>
+                <video class="w-full h-auto cursor-pointer" poster="https://via.placeholder.com/500x300?text=Method+C" controls onclick="this.paused ? this.play() : this.pause();">
+                    <source src="EMTD/musetalk/4SCrXqbhmCY-Scene-049_0BF2Np5J6jY-Scene-003.mp4" type="video/mp4">
+                    Your browser does not support the video tag.
+                </video>
+            </div>
+
+            </div>
+
+            <!-- Case 5 -->
+            <div class="case-header bg-white p-4 rounded-lg shadow-sm">
+                <h2 class="text-xl font-bold mb-2">Case 5</h2>
+            </div>
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+            <div class="video-container bg-white rounded-lg overflow-hidden shadow-md relative">
+                <div class="method-tag">A</div>
+                <video class="w-full h-auto cursor-pointer" poster="https://via.placeholder.com/500x300?text=Method+A" controls onclick="this.paused ? this.play() : this.pause();">
+                    <source src="EMTD/infinitetalk/5FCPLlF6P4g-Scene-004.mp4" type="video/mp4">
+                    Your browser does not support the video tag.
+                </video>
+            </div>
+
+            <div class="video-container bg-white rounded-lg overflow-hidden shadow-md relative">
+                <div class="method-tag">B</div>
+                <video class="w-full h-auto cursor-pointer" poster="https://via.placeholder.com/500x300?text=Method+B" controls onclick="this.paused ? this.play() : this.pause();">
+                    <source src="EMTD/latentsync/5FCPLlF6P4g-Scene-004.mp4" type="video/mp4">
+                    Your browser does not support the video tag.
+                </video>
+            </div>
+
+            <div class="video-container bg-white rounded-lg overflow-hidden shadow-md relative">
+                <div class="method-tag">C</div>
+                <video class="w-full h-auto cursor-pointer" poster="https://via.placeholder.com/500x300?text=Method+C" controls onclick="this.paused ? this.play() : this.pause();">
+                    <source src="EMTD/musetalk/5FCPLlF6P4g-Scene-004_4SCrXqbhmCY-Scene-049.mp4" type="video/mp4">
+                    Your browser does not support the video tag.
+                </video>
+            </div>
+
+            </div>
+
+            <!-- Case 6 -->
+            <div class="case-header bg-white p-4 rounded-lg shadow-sm">
+                <h2 class="text-xl font-bold mb-2">Case 6</h2>
+            </div>
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+            <div class="video-container bg-white rounded-lg overflow-hidden shadow-md relative">
+                <div class="method-tag">A</div>
+                <video class="w-full h-auto cursor-pointer" poster="https://via.placeholder.com/500x300?text=Method+A" controls onclick="this.paused ? this.play() : this.pause();">
+                    <source src="EMTD/infinitetalk/6UiU99_tE7I-Scene-002.mp4" type="video/mp4">
+                    Your browser does not support the video tag.
+                </video>
+            </div>
+
+            <div class="video-container bg-white rounded-lg overflow-hidden shadow-md relative">
+                <div class="method-tag">B</div>
+                <video class="w-full h-auto cursor-pointer" poster="https://via.placeholder.com/500x300?text=Method+B" controls onclick="this.paused ? this.play() : this.pause();">
+                    <source src="EMTD/latentsync/6UiU99_tE7I-Scene-002.mp4" type="video/mp4">
+                    Your browser does not support the video tag.
+                </video>
+            </div>
+
+            <div class="video-container bg-white rounded-lg overflow-hidden shadow-md relative">
+                <div class="method-tag">C</div>
+                <video class="w-full h-auto cursor-pointer" poster="https://via.placeholder.com/500x300?text=Method+C" controls onclick="this.paused ? this.play() : this.pause();">
+                    <source src="EMTD/musetalk/6UiU99_tE7I-Scene-002_4c_xYLwOx-g-Scene-023.mp4" type="video/mp4">
+                    Your browser does not support the video tag.
+                </video>
+            </div>
+
+            </div>
+
+            <!-- Case 7 -->
+            <div class="case-header bg-white p-4 rounded-lg shadow-sm">
+                <h2 class="text-xl font-bold mb-2">Case 7</h2>
+            </div>
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+            <div class="video-container bg-white rounded-lg overflow-hidden shadow-md relative">
+                <div class="method-tag">A</div>
+                <video class="w-full h-auto cursor-pointer" poster="https://via.placeholder.com/500x300?text=Method+A" controls onclick="this.paused ? this.play() : this.pause();">
+                    <source src="EMTD/infinitetalk/6UiU99_tE7I-Scene-027.mp4" type="video/mp4">
+                    Your browser does not support the video tag.
+                </video>
+            </div>
+
+            <div class="video-container bg-white rounded-lg overflow-hidden shadow-md relative">
+                <div class="method-tag">B</div>
+                <video class="w-full h-auto cursor-pointer" poster="https://via.placeholder.com/500x300?text=Method+B" controls onclick="this.paused ? this.play() : this.pause();">
+                    <source src="EMTD/latentsync/6UiU99_tE7I-Scene-027.mp4" type="video/mp4">
+                    Your browser does not support the video tag.
+                </video>
+            </div>
+
+            <div class="video-container bg-white rounded-lg overflow-hidden shadow-md relative">
+                <div class="method-tag">C</div>
+                <video class="w-full h-auto cursor-pointer" poster="https://via.placeholder.com/500x300?text=Method+C" controls onclick="this.paused ? this.play() : this.pause();">
+                    <source src="EMTD/musetalk/6UiU99_tE7I-Scene-027_5FCPLlF6P4g-Scene-004.mp4" type="video/mp4">
+                    Your browser does not support the video tag.
+                </video>
+            </div>
+
+            </div>
+
+            <!-- Case 8 -->
+            <div class="case-header bg-white p-4 rounded-lg shadow-sm">
+                <h2 class="text-xl font-bold mb-2">Case 8</h2>
+            </div>
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+            <div class="video-container bg-white rounded-lg overflow-hidden shadow-md relative">
+                <div class="method-tag">A</div>
+                <video class="w-full h-auto cursor-pointer" poster="https://via.placeholder.com/500x300?text=Method+A" controls onclick="this.paused ? this.play() : this.pause();">
+                    <source src="EMTD/infinitetalk/dKmHLAKQ5PI-Scene-038.mp4" type="video/mp4">
+                    Your browser does not support the video tag.
+                </video>
+            </div>
+
+            <div class="video-container bg-white rounded-lg overflow-hidden shadow-md relative">
+                <div class="method-tag">B</div>
+                <video class="w-full h-auto cursor-pointer" poster="https://via.placeholder.com/500x300?text=Method+B" controls onclick="this.paused ? this.play() : this.pause();">
+                    <source src="EMTD/latentsync/dKmHLAKQ5PI-Scene-038.mp4" type="video/mp4">
+                    Your browser does not support the video tag.
+                </video>
+            </div>
+
+            <div class="video-container bg-white rounded-lg overflow-hidden shadow-md relative">
+                <div class="method-tag">C</div>
+                <video class="w-full h-auto cursor-pointer" poster="https://via.placeholder.com/500x300?text=Method+C" controls onclick="this.paused ? this.play() : this.pause();">
+                    <source src="EMTD/musetalk/dKmHLAKQ5PI-Scene-038_VU44eEKtcmQ-Scene-027.mp4" type="video/mp4">
+                    Your browser does not support the video tag.
+                </video>
+            </div>
+
+            </div>
+
+            <!-- Case 9 -->
+            <div class="case-header bg-white p-4 rounded-lg shadow-sm">
+                <h2 class="text-xl font-bold mb-2">Case 9</h2>
+            </div>
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+            <div class="video-container bg-white rounded-lg overflow-hidden shadow-md relative">
+                <div class="method-tag">A</div>
+                <video class="w-full h-auto cursor-pointer" poster="https://via.placeholder.com/500x300?text=Method+A" controls onclick="this.paused ? this.play() : this.pause();">
+                    <source src="EMTD/infinitetalk/Dvhu2OK7ffg-Scene-008.mp4" type="video/mp4">
+                    Your browser does not support the video tag.
+                </video>
+            </div>
+
+            <div class="video-container bg-white rounded-lg overflow-hidden shadow-md relative">
+                <div class="method-tag">B</div>
+                <video class="w-full h-auto cursor-pointer" poster="https://via.placeholder.com/500x300?text=Method+B" controls onclick="this.paused ? this.play() : this.pause();">
+                    <source src="EMTD/latentsync/Dvhu2OK7ffg-Scene-008.mp4" type="video/mp4">
+                    Your browser does not support the video tag.
+                </video>
+            </div>
+
+            <div class="video-container bg-white rounded-lg overflow-hidden shadow-md relative">
+                <div class="method-tag">C</div>
+                <video class="w-full h-auto cursor-pointer" poster="https://via.placeholder.com/500x300?text=Method+C" controls onclick="this.paused ? this.play() : this.pause();">
+                    <source src="EMTD/musetalk/Dvhu2OK7ffg-Scene-008_6UiU99_tE7I-Scene-002.mp4" type="video/mp4">
+                    Your browser does not support the video tag.
+                </video>
+            </div>
+
+            </div>
+
+            <!-- Case 10 -->
+            <div class="case-header bg-white p-4 rounded-lg shadow-sm">
+                <h2 class="text-xl font-bold mb-2">Case 10</h2>
+            </div>
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+            <div class="video-container bg-white rounded-lg overflow-hidden shadow-md relative">
+                <div class="method-tag">A</div>
+                <video class="w-full h-auto cursor-pointer" poster="https://via.placeholder.com/500x300?text=Method+A" controls onclick="this.paused ? this.play() : this.pause();">
+                    <source src="EMTD/infinitetalk/dZtnOnqcDN4-Scene-025.mp4" type="video/mp4">
+                    Your browser does not support the video tag.
+                </video>
+            </div>
+
+            <div class="video-container bg-white rounded-lg overflow-hidden shadow-md relative">
+                <div class="method-tag">B</div>
+                <video class="w-full h-auto cursor-pointer" poster="https://via.placeholder.com/500x300?text=Method+B" controls onclick="this.paused ? this.play() : this.pause();">
+                    <source src="EMTD/latentsync/dZtnOnqcDN4-Scene-025.mp4" type="video/mp4">
+                    Your browser does not support the video tag.
+                </video>
+            </div>
+
+            <div class="video-container bg-white rounded-lg overflow-hidden shadow-md relative">
+                <div class="method-tag">C</div>
+                <video class="w-full h-auto cursor-pointer" poster="https://via.placeholder.com/500x300?text=Method+C" controls onclick="this.paused ? this.play() : this.pause();">
+                    <source src="EMTD/musetalk/dZtnOnqcDN4-Scene-025_Z3HJCQJ2Lmo-Scene-001.mp4" type="video/mp4">
+                    Your browser does not support the video tag.
+                </video>
+            </div>
+
+            </div>
+
+            <!-- Case 11 -->
+            <div class="case-header bg-white p-4 rounded-lg shadow-sm">
+                <h2 class="text-xl font-bold mb-2">Case 11</h2>
+            </div>
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+            <div class="video-container bg-white rounded-lg overflow-hidden shadow-md relative">
+                <div class="method-tag">A</div>
+                <video class="w-full h-auto cursor-pointer" poster="https://via.placeholder.com/500x300?text=Method+A" controls onclick="this.paused ? this.play() : this.pause();">
+                    <source src="EMTD/infinitetalk/eIRtcspIH4U-Scene-021.mp4" type="video/mp4">
+                    Your browser does not support the video tag.
+                </video>
+            </div>
+
+            <div class="video-container bg-white rounded-lg overflow-hidden shadow-md relative">
+                <div class="method-tag">B</div>
+                <video class="w-full h-auto cursor-pointer" poster="https://via.placeholder.com/500x300?text=Method+B" controls onclick="this.paused ? this.play() : this.pause();">
+                    <source src="EMTD/latentsync/eIRtcspIH4U-Scene-021.mp4" type="video/mp4">
+                    Your browser does not support the video tag.
+                </video>
+            </div>
+
+            <div class="video-container bg-white rounded-lg overflow-hidden shadow-md relative">
+                <div class="method-tag">C</div>
+                <video class="w-full h-auto cursor-pointer" poster="https://via.placeholder.com/500x300?text=Method+C" controls onclick="this.paused ? this.play() : this.pause();">
+                    <source src="EMTD/musetalk/eIRtcspIH4U-Scene-021_dKmHLAKQ5PI-Scene-038.mp4" type="video/mp4">
+                    Your browser does not support the video tag.
+                </video>
+            </div>
+
+            </div>
+
+            <!-- Case 12 -->
+            <div class="case-header bg-white p-4 rounded-lg shadow-sm">
+                <h2 class="text-xl font-bold mb-2">Case 12</h2>
+            </div>
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+            <div class="video-container bg-white rounded-lg overflow-hidden shadow-md relative">
+                <div class="method-tag">A</div>
+                <video class="w-full h-auto cursor-pointer" poster="https://via.placeholder.com/500x300?text=Method+A" controls onclick="this.paused ? this.play() : this.pause();">
+                    <source src="EMTD/infinitetalk/FpiWSFcL3-c-Scene-011.mp4" type="video/mp4">
+                    Your browser does not support the video tag.
+                </video>
+            </div>
+
+            <div class="video-container bg-white rounded-lg overflow-hidden shadow-md relative">
+                <div class="method-tag">B</div>
+                <video class="w-full h-auto cursor-pointer" poster="https://via.placeholder.com/500x300?text=Method+B" controls onclick="this.paused ? this.play() : this.pause();">
+                    <source src="EMTD/latentsync/FpiWSFcL3-c-Scene-011.mp4" type="video/mp4">
+                    Your browser does not support the video tag.
+                </video>
+            </div>
+
+            <div class="video-container bg-white rounded-lg overflow-hidden shadow-md relative">
+                <div class="method-tag">C</div>
+                <video class="w-full h-auto cursor-pointer" poster="https://via.placeholder.com/500x300?text=Method+C" controls onclick="this.paused ? this.play() : this.pause();">
+                    <source src="EMTD/musetalk/FpiWSFcL3-c-Scene-011_6UiU99_tE7I-Scene-027.mp4" type="video/mp4">
+                    Your browser does not support the video tag.
+                </video>
+            </div>
+
+            </div>
+
+            <!-- Case 13 -->
+            <div class="case-header bg-white p-4 rounded-lg shadow-sm">
+                <h2 class="text-xl font-bold mb-2">Case 13</h2>
+            </div>
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+            <div class="video-container bg-white rounded-lg overflow-hidden shadow-md relative">
+                <div class="method-tag">A</div>
+                <video class="w-full h-auto cursor-pointer" poster="https://via.placeholder.com/500x300?text=Method+A" controls onclick="this.paused ? this.play() : this.pause();">
+                    <source src="EMTD/infinitetalk/fua_rUk0zk0-Scene-017.mp4" type="video/mp4">
+                    Your browser does not support the video tag.
+                </video>
+            </div>
+
+            <div class="video-container bg-white rounded-lg overflow-hidden shadow-md relative">
+                <div class="method-tag">B</div>
+                <video class="w-full h-auto cursor-pointer" poster="https://via.placeholder.com/500x300?text=Method+B" controls onclick="this.paused ? this.play() : this.pause();">
+                    <source src="EMTD/latentsync/fua_rUk0zk0-Scene-017.mp4" type="video/mp4">
+                    Your browser does not support the video tag.
+                </video>
+            </div>
+
+            <div class="video-container bg-white rounded-lg overflow-hidden shadow-md relative">
+                <div class="method-tag">C</div>
+                <video class="w-full h-auto cursor-pointer" poster="https://via.placeholder.com/500x300?text=Method+C" controls onclick="this.paused ? this.play() : this.pause();">
+                    <source src="EMTD/musetalk/fua_rUk0zk0-Scene-017_dZtnOnqcDN4-Scene-025.mp4" type="video/mp4">
+                    Your browser does not support the video tag.
+                </video>
+            </div>
+
+            </div>
+
+            <!-- Case 14 -->
+            <div class="case-header bg-white p-4 rounded-lg shadow-sm">
+                <h2 class="text-xl font-bold mb-2">Case 14</h2>
+            </div>
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+            <div class="video-container bg-white rounded-lg overflow-hidden shadow-md relative">
+                <div class="method-tag">A</div>
+                <video class="w-full h-auto cursor-pointer" poster="https://via.placeholder.com/500x300?text=Method+A" controls onclick="this.paused ? this.play() : this.pause();">
+                    <source src="EMTD/infinitetalk/fua_rUk0zk0-Scene-024.mp4" type="video/mp4">
+                    Your browser does not support the video tag.
+                </video>
+            </div>
+
+            <div class="video-container bg-white rounded-lg overflow-hidden shadow-md relative">
+                <div class="method-tag">B</div>
+                <video class="w-full h-auto cursor-pointer" poster="https://via.placeholder.com/500x300?text=Method+B" controls onclick="this.paused ? this.play() : this.pause();">
+                    <source src="EMTD/latentsync/fua_rUk0zk0-Scene-024.mp4" type="video/mp4">
+                    Your browser does not support the video tag.
+                </video>
+            </div>
+
+            <div class="video-container bg-white rounded-lg overflow-hidden shadow-md relative">
+                <div class="method-tag">C</div>
+                <video class="w-full h-auto cursor-pointer" poster="https://via.placeholder.com/500x300?text=Method+C" controls onclick="this.paused ? this.play() : this.pause();">
+                    <source src="EMTD/musetalk/fua_rUk0zk0-Scene-024_eIRtcspIH4U-Scene-021.mp4" type="video/mp4">
+                    Your browser does not support the video tag.
+                </video>
+            </div>
+
+            </div>
+
+            <!-- Case 15 -->
+            <div class="case-header bg-white p-4 rounded-lg shadow-sm">
+                <h2 class="text-xl font-bold mb-2">Case 15</h2>
+            </div>
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+            <div class="video-container bg-white rounded-lg overflow-hidden shadow-md relative">
+                <div class="method-tag">A</div>
+                <video class="w-full h-auto cursor-pointer" poster="https://via.placeholder.com/500x300?text=Method+A" controls onclick="this.paused ? this.play() : this.pause();">
+                    <source src="EMTD/infinitetalk/ixBgCWLVvE8-Scene-006.mp4" type="video/mp4">
+                    Your browser does not support the video tag.
+                </video>
+            </div>
+
+            <div class="video-container bg-white rounded-lg overflow-hidden shadow-md relative">
+                <div class="method-tag">B</div>
+                <video class="w-full h-auto cursor-pointer" poster="https://via.placeholder.com/500x300?text=Method+B" controls onclick="this.paused ? this.play() : this.pause();">
+                    <source src="EMTD/latentsync/ixBgCWLVvE8-Scene-006.mp4" type="video/mp4">
+                    Your browser does not support the video tag.
+                </video>
+            </div>
+
+            <div class="video-container bg-white rounded-lg overflow-hidden shadow-md relative">
+                <div class="method-tag">C</div>
+                <video class="w-full h-auto cursor-pointer" poster="https://via.placeholder.com/500x300?text=Method+C" controls onclick="this.paused ? this.play() : this.pause();">
+                    <source src="EMTD/musetalk/ixBgCWLVvE8-Scene-006_fua_rUk0zk0-Scene-017.mp4" type="video/mp4">
+                    Your browser does not support the video tag.
+                </video>
+            </div>
+
+            </div>
+
+            <!-- Case 16 -->
+            <div class="case-header bg-white p-4 rounded-lg shadow-sm">
+                <h2 class="text-xl font-bold mb-2">Case 16</h2>
+            </div>
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+            <div class="video-container bg-white rounded-lg overflow-hidden shadow-md relative">
+                <div class="method-tag">A</div>
+                <video class="w-full h-auto cursor-pointer" poster="https://via.placeholder.com/500x300?text=Method+A" controls onclick="this.paused ? this.play() : this.pause();">
+                    <source src="EMTD/infinitetalk/ixBgCWLVvE8-Scene-012.mp4" type="video/mp4">
+                    Your browser does not support the video tag.
+                </video>
+            </div>
+
+            <div class="video-container bg-white rounded-lg overflow-hidden shadow-md relative">
+                <div class="method-tag">B</div>
+                <video class="w-full h-auto cursor-pointer" poster="https://via.placeholder.com/500x300?text=Method+B" controls onclick="this.paused ? this.play() : this.pause();">
+                    <source src="EMTD/latentsync/ixBgCWLVvE8-Scene-012.mp4" type="video/mp4">
+                    Your browser does not support the video tag.
+                </video>
+            </div>
+
+            <div class="video-container bg-white rounded-lg overflow-hidden shadow-md relative">
+                <div class="method-tag">C</div>
+                <video class="w-full h-auto cursor-pointer" poster="https://via.placeholder.com/500x300?text=Method+C" controls onclick="this.paused ? this.play() : this.pause();">
+                    <source src="EMTD/musetalk/ixBgCWLVvE8-Scene-012_fua_rUk0zk0-Scene-024.mp4" type="video/mp4">
+                    Your browser does not support the video tag.
+                </video>
+            </div>
+
+            </div>
+
+            <!-- Case 17 -->
+            <div class="case-header bg-white p-4 rounded-lg shadow-sm">
+                <h2 class="text-xl font-bold mb-2">Case 17</h2>
+            </div>
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+            <div class="video-container bg-white rounded-lg overflow-hidden shadow-md relative">
+                <div class="method-tag">A</div>
+                <video class="w-full h-auto cursor-pointer" poster="https://via.placeholder.com/500x300?text=Method+A" controls onclick="this.paused ? this.play() : this.pause();">
+                    <source src="EMTD/infinitetalk/j4QlG5jKpio-Scene-013.mp4" type="video/mp4">
+                    Your browser does not support the video tag.
+                </video>
+            </div>
+
+            <div class="video-container bg-white rounded-lg overflow-hidden shadow-md relative">
+                <div class="method-tag">B</div>
+                <video class="w-full h-auto cursor-pointer" poster="https://via.placeholder.com/500x300?text=Method+B" controls onclick="this.paused ? this.play() : this.pause();">
+                    <source src="EMTD/latentsync/j4QlG5jKpio-Scene-013.mp4" type="video/mp4">
+                    Your browser does not support the video tag.
+                </video>
+            </div>
+
+            <div class="video-container bg-white rounded-lg overflow-hidden shadow-md relative">
+                <div class="method-tag">C</div>
+                <video class="w-full h-auto cursor-pointer" poster="https://via.placeholder.com/500x300?text=Method+C" controls onclick="this.paused ? this.play() : this.pause();">
+                    <source src="EMTD/musetalk/j4QlG5jKpio-Scene-013_ixBgCWLVvE8-Scene-006.mp4" type="video/mp4">
+                    Your browser does not support the video tag.
+                </video>
+            </div>
+
+            </div>
+
+            <!-- Case 18 -->
+            <div class="case-header bg-white p-4 rounded-lg shadow-sm">
+                <h2 class="text-xl font-bold mb-2">Case 18</h2>
+            </div>
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+            <div class="video-container bg-white rounded-lg overflow-hidden shadow-md relative">
+                <div class="method-tag">A</div>
+                <video class="w-full h-auto cursor-pointer" poster="https://via.placeholder.com/500x300?text=Method+A" controls onclick="this.paused ? this.play() : this.pause();">
+                    <source src="EMTD/infinitetalk/lJUrQKY_A5g-Scene-011.mp4" type="video/mp4">
+                    Your browser does not support the video tag.
+                </video>
+            </div>
+
+            <div class="video-container bg-white rounded-lg overflow-hidden shadow-md relative">
+                <div class="method-tag">B</div>
+                <video class="w-full h-auto cursor-pointer" poster="https://via.placeholder.com/500x300?text=Method+B" controls onclick="this.paused ? this.play() : this.pause();">
+                    <source src="EMTD/latentsync/lJUrQKY_A5g-Scene-011.mp4" type="video/mp4">
+                    Your browser does not support the video tag.
+                </video>
+            </div>
+
+            <div class="video-container bg-white rounded-lg overflow-hidden shadow-md relative">
+                <div class="method-tag">C</div>
+                <video class="w-full h-auto cursor-pointer" poster="https://via.placeholder.com/500x300?text=Method+C" controls onclick="this.paused ? this.play() : this.pause();">
+                    <source src="EMTD/musetalk/lJUrQKY_A5g-Scene-011_ixBgCWLVvE8-Scene-012.mp4" type="video/mp4">
+                    Your browser does not support the video tag.
+                </video>
+            </div>
+
+            </div>
+
+            <!-- Case 19 -->
+            <div class="case-header bg-white p-4 rounded-lg shadow-sm">
+                <h2 class="text-xl font-bold mb-2">Case 19</h2>
+            </div>
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+            <div class="video-container bg-white rounded-lg overflow-hidden shadow-md relative">
+                <div class="method-tag">A</div>
+                <video class="w-full h-auto cursor-pointer" poster="https://via.placeholder.com/500x300?text=Method+A" controls onclick="this.paused ? this.play() : this.pause();">
+                    <source src="EMTD/infinitetalk/lJUrQKY_A5g-Scene-049.mp4" type="video/mp4">
+                    Your browser does not support the video tag.
+                </video>
+            </div>
+
+            <div class="video-container bg-white rounded-lg overflow-hidden shadow-md relative">
+                <div class="method-tag">B</div>
+                <video class="w-full h-auto cursor-pointer" poster="https://via.placeholder.com/500x300?text=Method+B" controls onclick="this.paused ? this.play() : this.pause();">
+                    <source src="EMTD/latentsync/lJUrQKY_A5g-Scene-049.mp4" type="video/mp4">
+                    Your browser does not support the video tag.
+                </video>
+            </div>
+
+            <div class="video-container bg-white rounded-lg overflow-hidden shadow-md relative">
+                <div class="method-tag">C</div>
+                <video class="w-full h-auto cursor-pointer" poster="https://via.placeholder.com/500x300?text=Method+C" controls onclick="this.paused ? this.play() : this.pause();">
+                    <source src="EMTD/musetalk/lJUrQKY_A5g-Scene-049_j4QlG5jKpio-Scene-013.mp4" type="video/mp4">
+                    Your browser does not support the video tag.
+                </video>
+            </div>
+
+            </div>
+
+            <!-- Case 20 -->
+            <div class="case-header bg-white p-4 rounded-lg shadow-sm">
+                <h2 class="text-xl font-bold mb-2">Case 20</h2>
+            </div>
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+            <div class="video-container bg-white rounded-lg overflow-hidden shadow-md relative">
+                <div class="method-tag">A</div>
+                <video class="w-full h-auto cursor-pointer" poster="https://via.placeholder.com/500x300?text=Method+A" controls onclick="this.paused ? this.play() : this.pause();">
+                    <source src="EMTD/infinitetalk/NBMTc71yrpk-Scene-020.mp4" type="video/mp4">
+                    Your browser does not support the video tag.
+                </video>
+            </div>
+
+            <div class="video-container bg-white rounded-lg overflow-hidden shadow-md relative">
+                <div class="method-tag">B</div>
+                <video class="w-full h-auto cursor-pointer" poster="https://via.placeholder.com/500x300?text=Method+B" controls onclick="this.paused ? this.play() : this.pause();">
+                    <source src="EMTD/latentsync/NBMTc71yrpk-Scene-020.mp4" type="video/mp4">
+                    Your browser does not support the video tag.
+                </video>
+            </div>
+
+            <div class="video-container bg-white rounded-lg overflow-hidden shadow-md relative">
+                <div class="method-tag">C</div>
+                <video class="w-full h-auto cursor-pointer" poster="https://via.placeholder.com/500x300?text=Method+C" controls onclick="this.paused ? this.play() : this.pause();">
+                    <source src="EMTD/musetalk/NBMTc71yrpk-Scene-020_Dvhu2OK7ffg-Scene-008.mp4" type="video/mp4">
+                    Your browser does not support the video tag.
+                </video>
+            </div>
+
+            </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+        </div>
+
+    </div>
+
+    <script>
+        // Video play/pause toggle functionality is now inline in the video elements
+    </script>
+</body>
+</html>
